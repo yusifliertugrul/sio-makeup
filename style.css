@@ -336,7 +336,7 @@ img { display: block; max-width: 100%; }
 .contact-card-title strong { color: #e7dbc9; font: 500 22px var(--serif); }
 .contact-row { display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 13px; min-height: 69px; padding: 12px 3px; border-top: 1px solid rgba(210, 171, 112, .2); color: #d3c3ad; text-decoration: none; transition: background .2s ease, padding .2s ease; }
 .contact-row:hover { padding-inline: 10px; background: rgba(210, 171, 112, .06); }
-.contact-number { color: #92764f; font: 500 15px var(--serif); }
+.contact-number { color: #92764f; font: 500 15px var(--serif); white-space: nowrap; }
 .contact-detail strong { color: #e3d5c1; font-size: 11px; font-weight: 500; }
 .contact-arrow { color: var(--gold); font-size: 13px; }
 .contact-row-primary { margin-block: 4px; padding-inline: 10px; border: 1px solid rgba(210, 171, 112, .38); background: rgba(210, 171, 112, .08); }
@@ -434,8 +434,10 @@ img { display: block; max-width: 100%; }
   .gallery-grid figure:first-child { grid-column: 1 / -1; }
   .gallery-grid img { height: 320px; }
   .gallery-grid figure:first-child img { height: min(112vw, 550px); }
-  .booking-frame { min-height: 0; padding: 55px 32px 37px; grid-template-columns: 1fr; gap: 34px; }
-  .booking-side { min-height: 0; padding: 28px 0 0; border-top: 1px solid var(--line); border-left: 0; }
+  .booking-frame { min-height: 0; padding: 45px 28px 30px; grid-template-columns: 1fr; gap: 25px; }
+  .booking-content > p:not(.eyebrow) { margin-block: 18px 21px; }
+  .booking-side { min-height: 0; padding: 21px 0 0; border-top: 1px solid var(--line); border-left: 0; }
+  .contact-card-title { margin-bottom: 11px; }
   .footer-top { min-height: 0; padding: 24px 0; grid-template-columns: 1fr auto; gap: 17px 20px; }
   .footer-top .brand { grid-column: 1; grid-row: 1; }
   .footer-top p { grid-column: 1; grid-row: 2; }
@@ -472,11 +474,17 @@ img { display: block; max-width: 100%; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-grid figure:first-child { grid-column: auto; }
   .gallery-grid img, .gallery-grid figure:first-child img { height: auto; max-height: 520px; object-fit: cover; }
-  .booking-frame { padding: 47px 23px 28px; }
+  .booking-frame { padding: 39px 20px 23px; gap: 20px; }
   .booking-content h2 { font-size: 58px; }
-  .booking-actions { display: grid; grid-template-columns: 1fr; }
-  .booking-actions .button { width: 100%; }
-  .contact-row { grid-template-columns: 28px 1fr auto; gap: 10px; }
+  .booking-content > p:not(.eyebrow) { margin-block: 15px 17px; }
+  .booking-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .booking-actions .button { width: 100%; min-height: 44px; padding-inline: 8px; gap: 6px; font-size: 7.5px; letter-spacing: .1em; }
+  .booking-actions .button-gold { grid-column: 1 / -1; }
+  .booking-actions .button span { padding-left: 0; font-size: 11px; }
+  .contact-row { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 8px; min-height: 58px; padding-block: 8px; }
+  .contact-row-primary { padding-inline: 8px; }
+  .contact-number { font-size: 12px; }
+  .contact-detail strong { font-size: 10px; }
   .footer-main { gap: 26px 15px; }
   .footer-main > div > small, .footer-navigation > small { font-size: 7px; }
   .footer-navigation a, .footer-contact a, .footer-social a { font-size: 9px; }
