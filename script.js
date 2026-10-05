@@ -68,3 +68,6 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   document.querySelectorAll('.service-card,.story-copy,.gallery-grid figure,.booking-frame')
     .forEach((element) => observer.observe(element));
 }
+
+const currentYear = document.querySelector('#current-year');
+if (currentYear) currentYear.textContent = new Date().getFullYear();
